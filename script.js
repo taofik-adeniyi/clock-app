@@ -72,10 +72,10 @@ function getDetails(currently) {
 	const weekDay = document.getElementById('week-day');
 	const weekNumber = document.getElementById('week-number');
 
-	timeZone.innerHTML = currently.timezone;
-	dayOfYear.innerHTML = currently.day_of_year;
-	weekDay.innerHTML = currently.day_of_week;
-	weekNumber.innerHTML = currently.week_number;
+	// timeZone.innerHTML = currently.timezone;
+	// dayOfYear.innerHTML = currently.day_of_year;
+	// weekDay.innerHTML = currently.day_of_week;
+	// weekNumber.innerHTML = currently.week_number;
 }
 
 
@@ -106,7 +106,7 @@ Promise
 
 			getQuote(quotesArray);
 			
-			document.getElementById('refresh').addEventListener('click', getQuote)
+			// document.getElementById('refresh').addEventListener('click', getQuote)
 		})
 	)
 	.catch((err) => console.error(err));
@@ -130,3 +130,10 @@ function showDetails() {
 
 // document.getElementById('refresh').addEventListener('click', getQuote);
 expand.addEventListener('click', showDetails);
+
+// Listen to tab events to enable outlines (accessibility improvement)
+// document.body.addEventListener('keyup', function(e) {
+//   if (e.keyCode === 9) /* tab */ {
+//     document.documentElement.classList.remove('no-focus-outline');
+//   }
+// });
