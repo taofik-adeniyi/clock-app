@@ -39,28 +39,13 @@ html {
 
 body {
   font-family: "Inter", sans-serif;
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-position: center center;
-  background-attachment: fixed;
+
   color: $white;
   height: 100%;
   min-height: 100%;
-  position: relative;
+  // position: relative;
   overflow-y: hidden;
   transition: all 0.5s ease;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    background: #000;
-    opacity: 0.4;
-  }
 }
 
 .sr-only {

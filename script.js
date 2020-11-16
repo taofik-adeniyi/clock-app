@@ -1,22 +1,22 @@
-const body = document.body;
+const body = document.body
+const background= document.querySelector('.background')
 
 
 function getTime(currentHour, currentMinutes, currently) {
-
-	const region = document.querySelector('.region');
+	const region = document.querySelector('.region')
 	const greeting = document.querySelector('.currently__greeting')
 	const icon = document.querySelector('.icon')
-	const period = document.querySelector(".period");
-	const time = document.querySelector(".time-now");
+	const period = document.querySelector(".period")
+	const time = document.querySelector(".time-now")
 
 	region.innerHTML = currently.abbreviation;
 	
 	if (currentHour >= 5 && currentHour <= 17 ) {
-		body.classList.add('day');
+		background.classList.add('day');
 		icon.src = './assets/desktop/icon-sun.svg';
 		icon.setAttribute("alt", "sun icon");
 	} else {
-		body.classList.add('night');
+		background.classList.add('night');
 		icon.src = './assets/desktop/icon-moon.svg';
 		icon.setAttribute("alt", "moon icon");
 	}
@@ -116,7 +116,7 @@ Promise
 const expand = document.querySelector('.expand');
 
 function showDetails() {
-	body.classList.toggle('transform');
+	background.classList.toggle('transform');
 
 	if (expand.firstChild.nodeValue === "More") {
 		expand.firstChild.nodeValue = "Less"
